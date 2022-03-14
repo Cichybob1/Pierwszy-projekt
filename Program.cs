@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 using ClassLibrary;
 using System.Collections.Generic;
 
@@ -8,16 +8,16 @@ namespace ConsoleApp24
     {
         static List<Person> GetEmployees()
         {
-            List<Person> employees = new List<Person>();
+            List<Person> employees = new List<Person>()
             {
-                new Person(new DateTime(1990, 2, 2), "Bill", "Wick");
-                new Person(new DateTime(1995, 6, 3), "John", "Wick");
-                new Person(new DateTime(1996, 4, 3), "Bob", "Wick");
-                new Person(new DateTime(2001, 2, 2), "Bill", "Smith");
-                new Person(new DateTime(2000, 2, 2), "John", "Smith");
-                new Person(new DateTime(2005, 2, 2), "Bob", "Smith");
-                new Person(new DateTime(2003, 2, 2), "Ed", "Smith");
-            }
+                new Person(new DateTime(1990, 2, 2), "Bill", "Wick"),
+                new Person(new DateTime(1995, 6, 3), "John", "Wick"),
+                new Person(new DateTime(1996, 4, 3), "Bob", "Wick"),
+                new Person(new DateTime(2001, 2, 2), "Bill", "Smith"),
+                new Person(new DateTime(2000, 2, 2), "John", "Smith"),
+                new Person(new DateTime(2005, 2, 2), "Bob", "Smith"),
+                new Person(new DateTime(2003, 2, 2), "Ed", "Smith")
+            };
             return employees;
         }
         #region
@@ -82,7 +82,7 @@ namespace ConsoleApp24
                 }
             }
             Console.WriteLine($"Young employees count: {youngEmployees.Count}");
-
+            
             Person Bob = null;
             foreach (Person youngEmployee in youngEmployees)
             {
